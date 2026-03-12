@@ -316,7 +316,6 @@ Performance on medical datasets (1-shot setting):
 | HIS | 72.1% | - |
 | OCT2017 | 88.5% | - |
 
-*Note: Pixel-AUROC and PRO are only available for datasets with pixel-level annotations.*
 
 ---
 
