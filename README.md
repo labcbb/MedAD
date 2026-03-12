@@ -32,8 +32,6 @@ git clone https://github.com/labcbb/MedAD.git
 cd MedAD
 ```
 
-**Important**: Use `--recurse-submodules` to clone necessary submodules (dinov2, etc.)
-
 ### Step 2: Create Conda Environment
 
 We recommend using Python 3.9-3.11:
