@@ -1,0 +1,5 @@
+grounding_config: 
+  box_threshold: 0.35
+  text_threshold: 0.35
+  text_prompt: "Retina . object " # . grain . mixture
+  background_prompt: ""

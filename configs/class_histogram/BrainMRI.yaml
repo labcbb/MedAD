@@ -1,0 +1,5 @@
+grounding_config: 
+  box_threshold: 0.2
+  text_threshold: 0.2
+  text_prompt: "MRI" # . grain . mixture
+  background_prompt: ""

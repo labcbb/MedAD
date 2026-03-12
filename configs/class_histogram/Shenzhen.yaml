@@ -1,0 +1,9 @@
+grounding_config:
+  box_threshold: 0.25
+  text_threshold: 0.35
+  text_prompt: "lung"
+  background_prompt: ""
+  sam_backend: medsam
+  medsam_arch: vit_b
+  medsam_ckpt: ./pretrained_ckpts/medsam_vit_b.pth
+

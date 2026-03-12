@@ -1,0 +1,5 @@
+grounding_config:
+  box_threshold: 0.25
+  text_threshold: 0.25
+  text_prompt: "fundus image"
+  background_prompt: ""
