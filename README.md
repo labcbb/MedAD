@@ -7,11 +7,6 @@ Official implementation of paper [MedAD: A Training-free Unified Model for Few-s
 
 MedAD is a **training-free** unified model for few-shot medical anomaly detection. It can detect anomalies across various medical imaging modalities (MRI, CT, X-ray, OCT, histopathology, fundus) using only a few normal reference samples, without requiring domain-specific training.
 
-### Key Components
-
-- **Contextual Component Clustering ($C^3$)**: Segments anatomical components within medical images by combining clustering techniques with vision foundation models.
-- **Component-Aware Patch Matching (CAPM)**: Detects structural anomalies by matching patch-level features within each anatomical component.
-- **Graph-Enhanced Component Modeling (GECM)**: Identifies logical anomalies by modeling relationships between image components through graph-based feature aggregation.
 
 ![MedAD Architecture](figures/arch.jpg)
 
