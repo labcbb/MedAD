@@ -51,7 +51,7 @@ conda activate medad
 conda install pytorch==2.2.0 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia -y
 
 # Install other dependencies
-pip install -r requirements_medical.txt
+pip install -r requirements.txt
 
 # Install GroundingDINO
 cd models/GroundingDINO
