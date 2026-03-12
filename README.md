@@ -23,7 +23,7 @@ MedAD is a **training-free** unified model for few-shot medical anomaly detectio
 
 ---
 
-##Environment Setup
+## Environment Setup
 
 ### Step 1: Clone the Repository
 
