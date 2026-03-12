@@ -5,10 +5,11 @@ Official implementation of paper [MedAD: A Training-free Unified Model for Few-s
 ---
 ## Introduction
 
-MedAD is a **training-free** unified model for few-shot medical anomaly detection. It can detect anomalies across various medical imaging modalities (MRI, CT, X-ray, OCT, histopathology, fundus) using only a few normal reference samples, without requiring domain-specific training.
+MedAD is a **training-free** unified model for few-shot medical anomaly detection. It can detect anomalies across various medical imaging modalities using only a few normal reference samples, without requiring domain-specific training.
 
 
-![MedAD Architecture](figures/arch.jpg)
+![MedAD Architecture](https://github.com/user-attachments/files/25932678/1.pdf)
+
 
 ---
 
@@ -27,7 +28,7 @@ MedAD is a **training-free** unified model for few-shot medical anomaly detectio
 ### Step 1: Clone the Repository
 
 ```bash
-git clone --recurse-submodules https://github.com/YourUsername/MedAD.git
+git clone https://github.com/labcbb/MedAD.git
 cd MedAD
 ```
 
