@@ -18,7 +18,7 @@ MedAD is a **training-free** unified model for few-shot medical anomaly detectio
 - **Training-free**: No need for extensive training on target datasets
 - **Few-shot Learning**: Works with only 1-2 normal reference samples
 - **Multi-modal**: Supports various medical imaging modalities
-- **State-of-the-art**: Achieves superior performance on 6 medical datasets
+- **State-of-the-art**: Achieves superior performance on 7 medical datasets
 - **Unified Model**: Single model for multiple medical imaging tasks
 
 ---
