@@ -142,7 +142,7 @@ MedAD is evaluated on 7 medical imaging datasets spanning 6 different imaging mo
 cd data
 
 # Download medical datasets
-wget "https://zenodo.org/records/18981810?preview=1" -O BUSI.tar.gz
+wget https://zenodo.org/records/18981810/files/BUSI.tar.gz?download=1 -O BUSI.tar.gz
 
 # Extract datasets
 tar -xzf BUSI.tar.gz
