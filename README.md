@@ -141,17 +141,16 @@ MedAD is evaluated on 7 medical imaging datasets spanning 6 different imaging mo
 # Navigate to data folder
 cd data
 
-# Download medical datasets (replace with actual Zenodo link)
-wget [ZENODO_LINK_HERE] -O medical_datasets.tar.gz
+# Download medical datasets
+wget "https://zenodo.org/records/18981810?preview=1" -O BUSI.tar.gz
 
 # Extract datasets
-tar -xzf medical_datasets.tar.gz
+tar -xzf BUSI.tar.gz
 
 # Verify extraction
-ls -d BrainMRI LiverCT RESC ChestXray HIS OCT17
+ls -d BraTS21 BUSI RESC ISIC18 HIS OCT2017
 
 cd ..
-```
 
 ### Dataset Directory Structure
 
@@ -216,12 +215,12 @@ python segment_components.py
 
 Expected output:
 ```
-Processing BrainMRI...
-Processing LiverCT...
+Processing BraTS21...
+Processing BUSI...
 Processing RESC...
-Processing ChestXray...
+Processing ISIC18...
 Processing HIS...
-Processing OCT17...
+Processing OCT2017...
 Component segmentation completed!
 ```
 
@@ -233,18 +232,13 @@ Component segmentation completed!
 bash test_medical.sh
 ```
 
-This script will sequentially test on all 6 medical datasets.
-
 #### Test on Individual Datasets
 
 **Datasets with pixel-level annotations:**
 
 ```bash
-# BrainMRI
+# BraTS
 python test_medad.py --dataset brainmri --data_path ./data/BrainMRI --round 0 --image_size 224 --k_shot 1
-
-# LiverCT
-python test_medad.py --dataset liverct --data_path ./data/LiverCT --round 0 --image_size 224 --k_shot 1
 
 # RESC
 python test_medad.py --dataset resc --data_path ./data/RESC --round 0 --image_size 224 --k_shot 1
@@ -253,14 +247,11 @@ python test_medad.py --dataset resc --data_path ./data/RESC --round 0 --image_si
 **Datasets with image-level annotations only:**
 
 ```bash
-# ChestXray
-python test_medad_no_pixel.py --dataset chestxray --data_path ./data/ChestXray --round 0 --image_size 224 --k_shot 1
-
 # HIS
 python test_medad_no_pixel.py --dataset his --data_path ./data/HIS --round 0 --image_size 224 --k_shot 1
 
-# OCT17
-python test_medad_no_pixel.py --dataset oct17 --data_path ./data/OCT17 --round 0 --image_size 224 --k_shot 1
+# OCT2017
+python test_medad_no_pixel.py --dataset oct2017 --data_path ./data/OCT2017 --round 0 --image_size 224 --k_shot 1
 ```
 
 ### Step 3: View Results
@@ -272,7 +263,7 @@ ls results/
 ```
 
 Each dataset will have a subfolder containing:
-- `metrics.json`: Image-AUROC, Pixel-AUROC, PRO scores
+- `metrics.json`: Image-AUROC, Pixel-AUROC
 - `predictions/`: Anomaly maps for each test image
 - `visualizations/`: Side-by-side comparisons (original, ground truth, prediction)
 
@@ -309,7 +300,7 @@ Performance on medical datasets (1-shot setting):
 
 | Dataset | Image-AUROC | Pixel-AUROC |
 |---------|-------------|-------------|
-| BrainMRI | 95.3% | 95.7% |
+| BraTS21 | 95.3% | 95.7% |
 | BUSI | 82.9% | 84.6% |
 | RESC | 84.6% | 94.0% |
 | ISIC18 | 98.7% | 85.1% |
@@ -327,7 +318,7 @@ If you encounter OOM errors:
 
 ```bash
 # Reduce image size
-python test_medad.py --dataset brainmri --data_path ./data/BrainMRI --image_size 192 --k_shot 1
+python test_medad.py --dataset brainmri --data_path ./data/BraTS21 --image_size 192 --k_shot 1
 
 # Or use a smaller CLIP model (edit MedAD.py to use ViT-B/32 instead of ViT-L/14)
 ```
